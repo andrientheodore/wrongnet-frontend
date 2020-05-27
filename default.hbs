@@ -43,10 +43,12 @@
                 </div>
                 <div class="site-head-right">
                     {{#if @member}}
-                        <a class="" href="{{@site.url}}/account/">Account</a>
-                        <a class="" href="#signout" data-members-signout>Logout</a>
+                    <ul class="nav" role="menu">
+                        <li class="nav-acccount"><a class="" href="{{@site.url}}/account/">Account</a></li>
+                        <li class="nav-logout"><a class="" href="#signout" data-members-signout>Logout</a></li>
+                    </ul>
                     {{else}}
-                        <a class="signin-link" href="{{@site.url}}/signin/">Log in</a>
+                    <a class="signin-link" href="{{@site.url}}/signin/">Log in</a>
                     {{/if}}
                 </div>
             </div>
