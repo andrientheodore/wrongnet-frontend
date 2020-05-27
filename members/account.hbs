@@ -1,0 +1,58 @@
+{{!< ../default}}
+
+    {{#if @member}}
+        <article class="post-content">
+            <header class="post-content-header">
+                <h1 class="post-content-title">Welcome back!, {{@member.email}}</h1>
+            </header>
+
+            <div class="post-content-body">                
+                    <form method="post" action="#">
+                    <div class="row gtr-uniform">
+                        <div class="col-6 col-12-xsmall">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" value="" placeholder="Username" disabled/>
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <label for="vpn-plan">Your Plan</label>
+                            <input type="text" name="vpn-plan" id="vpn-plan" value="" placeholder="VPN Plan" disabled/>
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <label for="qr-link">QR Link</label>
+                            <input type="text" name="qr-link" id="qr-link" value="" placeholder="QR Link" disabled/>
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <label for="config-link">Configuration Link</label>
+                            <input type="text" name="config-link" id="config-link" value="" placeholder="Config Link" disabled/>
+                        </div>
+                        <div class="col-6 col-12-xsmall">
+                            <label for="expired-at">Subscription Expiration</label>
+                            <input type="text" name="expired-at" id="expired-at" value="" placeholder="Expired At" disabled/>
+                        </div>
+                        <p><i>Jika data tidak terload, harap untuk melakukan refresh browser.</i></p>
+                        <div id="tmp" style="visibility: hidden;">{{@member.name}}</div>
+                    </div>
+                </form>
+            </div>
+        </article>
+
+    {{else}}
+        {{!-- Not logged in: Redirect to signin --}}
+        <script>window.location = '{{@site.url}}/signin/';</script>
+    {{/if}}
+    
+{{#contentFor "scripts"}}
+<script>
+    var memberinfo = document.getElementById("tmp").innerHTML
+    try {   
+        var tmp = JSON.parse(memberinfo)
+        var username = document.getElementById("username").value = tmp.username
+        var vpn_plan = document.getElementById("vpn-plan").value = tmp.plan
+        var qr_link = document.getElementById("qr-link").value = tmp.qrpath
+        var config_link = document.getElementById("config-link").value = tmp.cfgpath 
+        var expired_at = document.getElementById("expired-at").value = tmp.expired
+    } catch (e) {
+        console.log("JSON tidak valid, harap hubungi sysadmin")
+    }
+</script>
+{{/contentFor}}

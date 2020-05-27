@@ -1,0 +1,28 @@
+{{!< ../default}}
+
+{{#if @member}}
+    {{!-- Logged in: Redirect home --}}
+    <script>window.location = '{{@site.url}}';</script>
+{{else}}
+<article class="post-content">
+    <header class="post-content-header">
+        <h1 class="post-content-title">Welcome back!,</h1>
+        <h5>Sign into your account again.</h5>
+    </header>
+
+    <div class="post-content-body">                
+        <form data-members-form="signin">
+            <div class="row gtr-uniform">
+                <div class="col-8 col-12-xsmall">
+                    <input data-members-email type="email" placeholder="Your email address" required="true" autocomplete="false" />
+                </div>
+                <div class="col-4 col-12-xsmall">
+                    <ul class="actions">
+                        <li><button type="submit" class="primary">Send your login link!</button></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</article>
+{{/if}}

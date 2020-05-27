@@ -2,13 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-{{#is "home"}}
-    {{#if @blog.description}}
-    <header class="page-head">
-        <h2 class="page-head-title">{{@blog.description}}</h2>
-    </header>
-    {{/if}}
-{{/is}}
+{{> site-header }}
 
 <div class="post-feed">
     {{#foreach posts}}
