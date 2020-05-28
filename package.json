@@ -1,37 +1,10 @@
 {
-  "_args": [
-    [
-      "github:tryghost/london#1.0.0",
-      "/tmp/build_2cecfa3a50196f473af0758f79b61c15"
-    ]
-  ],
-  "_from": "github:tryghost/london#1.0.0",
-  "_id": "london@github:tryghost/london#330dbc9252ecbfa83effe47ed4a889a69e8c39ec",
-  "_inBundle": false,
-  "_integrity": "",
-  "_location": "/london",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "git",
-    "raw": "github:tryghost/london#1.0.0",
-    "rawSpec": "github:tryghost/london#1.0.0",
-    "saveSpec": "github:tryghost/london#1.0.0",
-    "fetchSpec": null,
-    "gitCommittish": "1.0.0"
-  },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "github:tryghost/london#330dbc9252ecbfa83effe47ed4a889a69e8c39ec",
-  "_spec": "github:tryghost/london#1.0.0",
-  "_where": "/tmp/build_2cecfa3a50196f473af0758f79b61c15",
   "author": {
-    "name": "Ghost Foundation",
-    "email": "hello@ghost.org",
-    "url": "https://ghost.org"
-  },
-  "bugs": {
-    "url": "https://github.com/TryGhost/London/issues"
+    "name": "Andrien Theodore",
+    "url": "https://wrongnet.xyz"
   },
   "config": {
     "posts_per_page": 15,
@@ -53,9 +26,6 @@
       }
     }
   },
-  "contributors": "https://github.com/TryGhost/London/graphs/contributors",
-  "demo": "https://london.ghost.io",
-  "description": "A minimum, image-centric theme for Ghost.",
   "devDependencies": {
     "autoprefixer": "6.3.6",
     "cssnano": "3.7.1",
@@ -76,28 +46,11 @@
   "engines": {
     "ghost-api": ">=3.0.0"
   },
-  "gpm": {
-    "type": "theme",
-    "categories": [
-      "Minimal",
-      "Magazine"
-    ]
-  },
-  "homepage": "https://github.com/TryGhost/London#readme",
-  "keywords": [
-    "ghost",
-    "theme",
-    "ghost-theme"
-  ],
   "license": "MIT",
-  "name": "london",
+  "name": "wrongnet-frontend",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TryGhost/London.git"
-  },
-  "screenshots": {
-    "desktop": "assets/screenshot-desktop.jpg",
-    "mobile": "assets/screenshot-mobile.jpg"
+    "url": "git+https://github.com/andrientheodore/wrongnet-frontend"
   },
   "scripts": {
     "dev": "gulp",
