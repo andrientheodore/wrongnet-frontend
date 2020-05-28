@@ -723,6 +723,18 @@ form[data-members-form] .message-error {
     display: none;
 }
 
+form[data-members-form] .button-loader {
+    display: none;
+}
+
+form[data-members-form].loading .button-content {
+    visibility: hidden;
+}
+
+form[data-members-form].loading .button-loader {
+    display: block;
+}
+
 form[data-members-form].success .message-success {
     display: block;
 }

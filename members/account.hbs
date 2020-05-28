@@ -43,16 +43,18 @@
     
 {{#contentFor "scripts"}}
 <script>
-    var memberinfo = document.getElementById("tmp").innerHTML
-    try {   
-        var tmp = JSON.parse(memberinfo)
-        var username = document.getElementById("username").value = tmp.username
-        var vpn_plan = document.getElementById("vpn-plan").value = tmp.plan
-        var qr_link = document.getElementById("qr-link").value = tmp.qrpath
-        var config_link = document.getElementById("config-link").value = tmp.cfgpath 
-        var expired_at = document.getElementById("expired-at").value = tmp.expired
-    } catch (e) {
-        console.log("JSON tidak valid, harap hubungi sysadmin")
-    }
+    $(document).ready(function() {
+        var memberinfo = document.getElementById("tmp").innerHTML
+        try {   
+            var tmp = JSON.parse(memberinfo)
+            var username = document.getElementById("username").value = tmp.username
+            var vpn_plan = document.getElementById("vpn-plan").value = tmp.plan
+            var qr_link = document.getElementById("qr-link").value = tmp.qrpath
+            var config_link = document.getElementById("config-link").value = tmp.cfgpath 
+            var expired_at = document.getElementById("expired-at").value = tmp.expired
+        } catch (e) {
+            console.log("JSON tidak valid, harap hubungi sysadmin")
+        }
+    })
 </script>
 {{/contentFor}}

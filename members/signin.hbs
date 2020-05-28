@@ -11,8 +11,7 @@
     </header>
 
     <div class="post-content-body">         
-        <form data-members-form="signin" class="signin-form">
-
+        <form data-members-form="signin" class="signin-form" id="signin-form">
         <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to complete signin</div>
         <div class="message-error">Please enter a valid email address!</div>       
             <div class="row gtr-uniform">
@@ -21,7 +20,12 @@
                 </div>
                 <div class="col-4 col-12-xsmall">
                     <ul class="actions">
-                        <li><button type="submit" class="primary">Send your login link!</button></li>
+                        <li>
+                            <button type="submit" class="primary"> 
+                                <span class="button-loader">{{> "icons/loader"}}</span>
+                                <span class="button-content">Send your login link!</span> 
+                            </button>
+                        </li>
                     </ul>
                 </div>
             </div>
