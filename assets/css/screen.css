@@ -391,7 +391,6 @@ body {
 
 .post-feed {
     display: flex;
-    align-items: ;
     flex-wrap: wrap;
 }
 
@@ -713,4 +712,21 @@ body {
 .page-template .post-content-body h2,
 .page-template .post-content-body h3 {
     text-align: center;
+}
+
+/* Members Template
+/* ---------------------------------------------------------- */
+form[data-members-form] .message-success {
+    display: none;
+}
+form[data-members-form] .message-error {
+    display: none;
+}
+
+form[data-members-form].success .message-success {
+    display: block;
+}
+
+form[data-members-form].error .message-error {
+    display: block;
 }

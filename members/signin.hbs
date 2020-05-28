@@ -10,8 +10,11 @@
         <h5>Sign into your account again.</h5>
     </header>
 
-    <div class="post-content-body">                
-        <form data-members-form="signin">
+    <div class="post-content-body">         
+        <form data-members-form="signin" class="signin-form">
+
+        <div class="message-success"><strong>Great!</strong> Check your inbox and click the link to complete signin</div>
+        <div class="message-error">Please enter a valid email address!</div>       
             <div class="row gtr-uniform">
                 <div class="col-8 col-12-xsmall">
                     <input data-members-email type="email" placeholder="Your email address" required="true" autocomplete="false" />
