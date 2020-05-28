@@ -74,7 +74,7 @@
     "postcss-easy-import": "1.0.1"
   },
   "engines": {
-    "ghost": ">=2.0.0"
+    "ghost-api": ">=3.0.0"
   },
   "gpm": {
     "type": "theme",
