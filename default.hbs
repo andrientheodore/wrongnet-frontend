@@ -111,6 +111,25 @@
         });
     </script>
 
+    <script>
+        function init() {
+            if(document.querySelector('#tmp') != null) {
+                var memberinfo = document.getElementById("tmp").innerHTML
+                try {   
+                    var tmp = JSON.parse(memberinfo)
+                    var username = document.getElementById("username").value = tmp.username
+                    var vpn_plan = document.getElementById("vpn-plan").value = tmp.plan
+                    var qr_link = document.getElementById("qr-link").src = tmp.qrpath
+                    var config_link = document.getElementById("config-link").href = tmp.cfgpath 
+                    var expired_at = document.getElementById("expired-at").value = tmp.expired
+                } catch (e) {
+                    console.log("JSON tidak valid, harap hubungi sysadmin")
+                }
+            }
+        }
+        init(); 
+        document.addEventListener('swup:pageView', init);
+    </script>
 
     {{#if pagination.pages}}
     <script>
@@ -118,6 +137,7 @@
         // if we need to load more pages for the infinitescroll, or if
         // we reached the last page already.
         var maxPages = parseInt('{{pagination.pages}}');
+        
     </script>
     <script src="{{asset "built/infinitescroll.js"}}"></script>
     {{/if}}
