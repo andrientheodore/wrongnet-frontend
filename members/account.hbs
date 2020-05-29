@@ -19,11 +19,11 @@
                         </div>
                         <div class="col-6 col-12-xsmall">
                             <label for="qr-link">QR Link</label>
-                            <input type="text" name="qr-link" id="qr-link" value="" placeholder="QR Link" disabled/>
+                            <img src="https://chart.googleapis.com/chart?cht=qr&chl=test&chs=180x180&choe=UTF-8&chld=L|2" alt="" style="display: block;" id="qr-link">
                         </div>
                         <div class="col-6 col-12-xsmall">
                             <label for="config-link">Configuration Link</label>
-                            <input type="text" name="config-link" id="config-link" value="" placeholder="Config Link" disabled/>
+                            <a href="#" class="button primary" id="config-link">🗝️ Download Configuration</a>
                         </div>
                         <div class="col-6 col-12-xsmall">
                             <label for="expired-at">Subscription Expiration</label>
@@ -49,8 +49,8 @@
             var tmp = JSON.parse(memberinfo)
             var username = document.getElementById("username").value = tmp.username
             var vpn_plan = document.getElementById("vpn-plan").value = tmp.plan
-            var qr_link = document.getElementById("qr-link").value = tmp.qrpath
-            var config_link = document.getElementById("config-link").value = tmp.cfgpath 
+            var qr_link = document.getElementById("qr-link").src = tmp.qrpath
+            var config_link = document.getElementById("config-link").href = tmp.cfgpath 
             var expired_at = document.getElementById("expired-at").value = tmp.expired
         } catch (e) {
             console.log("JSON tidak valid, harap hubungi sysadmin")
