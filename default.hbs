@@ -44,11 +44,14 @@
                 <div class="site-head-right">
                     {{#if @member}}
                     <ul class="nav" role="menu">
-                        <li class="nav-acccount"><a href="{{@site.url}}/account/">Account</a></li>
-                        <li class="nav-logout"><a href="#signout" data-members-signout>Logout</a></li>
+                        <li class="nav-acccount"><a href="{{@site.url}}/account/">👤 Account</a></li>
+                        <li class="nav-logout"><a href="#signout" data-members-signout>🚪 Logout</a></li>
                     </ul>
                     {{else}}
-                    <a class="signin-link" href="{{@site.url}}/signin/">🔒 Log in</a>
+                    <ul class="nav" role="menu">
+                        <li class="nav-signin"><a class="signin-link" href="{{@site.url}}/signin/">🔒 Log in</a></li>
+                        <li class="nav-subscribe"><a class="subscribe-link" href="{{@site.url}}/subscribe/">🛒 Subscribe</a></li>
+                    </ul>                 
                     {{/if}}
                 </div>
             </div>
