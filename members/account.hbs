@@ -6,6 +6,7 @@
                 <h1 class="post-content-title">Welcome back!, {{@member.email}}</h1>
             </header>
 
+            <h1>{{@member.name.username}}</h1>
             <div class="post-content-body">                
                     <form method="post" action="#">
                     <div class="row gtr-uniform">
@@ -29,7 +30,6 @@
                             <label for="expired-at">Subscription Expiration</label>
                             <input type="text" name="expired-at" id="expired-at" value="" placeholder="Expired At" disabled/>
                         </div>
-                        <p><i>Jika data tidak terload, harap untuk melakukan refresh browser.</i></p>
                         <div id="tmp" style="visibility: hidden;">{{@member.name}}</div>
                     </div>
                 </form>
@@ -43,18 +43,25 @@
     
 {{#contentFor "scripts"}}
 <script>
-    $(document).ready(function() {
-        var memberinfo = document.getElementById("tmp").innerHTML
-        try {   
-            var tmp = JSON.parse(memberinfo)
-            var username = document.getElementById("username").value = tmp.username
-            var vpn_plan = document.getElementById("vpn-plan").value = tmp.plan
-            var qr_link = document.getElementById("qr-link").src = tmp.qrpath
-            var config_link = document.getElementById("config-link").href = tmp.cfgpath 
-            var expired_at = document.getElementById("expired-at").value = tmp.expired
-        } catch (e) {
-            console.log("JSON tidak valid, harap hubungi sysadmin")
+
+    function init() {
+        if(document.querySelector('#tmp') != null) {
+            var memberinfo = document.getElementById("tmp").innerHTML
+            try {   
+                var tmp = JSON.parse(memberinfo)
+                var username = document.getElementById("username").value = tmp.username
+                var vpn_plan = document.getElementById("vpn-plan").value = tmp.plan
+                var qr_link = document.getElementById("qr-link").src = tmp.qrpath
+                var config_link = document.getElementById("config-link").href = tmp.cfgpath 
+                var expired_at = document.getElementById("expired-at").value = tmp.expired
+            } catch (e) {
+                console.log("JSON tidak valid, harap hubungi sysadmin")
+            }
         }
-    })
+    }
+
+    init(); 
+    document.addEventListener('swup:contentReplaced', init);
+
 </script>
 {{/contentFor}}
