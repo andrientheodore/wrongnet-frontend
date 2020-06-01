@@ -514,7 +514,7 @@ body {
 }
 
 .post-content-title {
-    margin: 0 0 3vw;
+    margin: 0 0 0;
     color: var(--color-base);
     text-align: center;
 }
@@ -577,7 +577,7 @@ body {
 .post-content-body blockquote {
     margin: 0 0 1.5em;
     padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    border-left: #aca8a8 3px solid;
 }
 
 .post-content-body blockquote p {
@@ -751,7 +751,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 30px;
-    border-top: var(--blue) 6px solid;
+    border-top: #aca8a8 6px solid;
     color: color(var(--midgrey) l(-30%));
     text-align: left;
     background: #fff;

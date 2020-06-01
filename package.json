@@ -4,7 +4,8 @@
   ],
   "author": {
     "name": "Andrien Theodore",
-    "url": "https://wrongnet.xyz"
+    "url": "https://wrongnet.xyz",
+    "email": "no-reply@wrongnet.xyz"
   },
   "config": {
     "posts_per_page": 15,
@@ -47,6 +48,7 @@
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
   },
+  "keywords": ["ghost-theme"],
   "license": "MIT",
   "name": "wrongnet-frontend",
   "repository": {
